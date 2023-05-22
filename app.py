@@ -26,7 +26,7 @@ st.info(
         )
 
 if df is not None:
-    data = pd.read_csv(df)
+    data = pd.read_csv(df,sep=';')
     data['ds'] = pd.to_datetime(data['ds'],errors='coerce') 
     
     st.write(data)
